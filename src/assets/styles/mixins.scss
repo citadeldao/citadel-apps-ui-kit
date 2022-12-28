@@ -1,0 +1,21 @@
+/*
+
+360-559 - mobile design
+560-1023 - desktop design
+1024 - 1219 - mobile design (2 panels)
+1220 - desktop design (2 panels)
+*/
+
+// mobile first
+@mixin desktopRespond() {
+  @media (min-width: 560px) and (max-width: 1024px), (min-width: 1220px) {
+    @content;
+  }
+}
+
+// desktop first
+@mixin mobileRespond() {
+  /*@media (min-width: 560px) and (max-width: 1024px), (min-width: 1220px) {
+    @content;
+  }*/
+}

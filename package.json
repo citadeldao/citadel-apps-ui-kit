@@ -1,0 +1,65 @@
+{
+  "name": "@citadeldao/apps-ui-kit",
+  "version": "0.497.0",
+  "files": [
+    "dist/",
+    "README.md"
+  ],
+  "main": "./dist/main.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@amir04lm26/react-modern-calendar-date-picker": "^1.0.1",
+    "bignumber.js": "^9.0.2",
+    "classnames": "^2.3.1",
+    "lottie-web": "^5.9.4",
+    "moment": "^2.29.3",
+    "prop-types": "^15.8.1",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-router-dom": "^6.2.2",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "geticons": "node getIcons.js",
+    "start": "npm run geticons && react-scripts start",
+    "build-styles": "sass --no-source-map --style=compressed src/assets/styles/uiKit:dist/assets/styles/uiKit",
+    "build": "npm run geticons && rm -rf dist && cross-env NODE_ENV=production babel src --out-dir dist --copy-files && rm -rf dist/assets/styles/uiKit && npm run build-styles",
+    "build-app": "npm run geticons && react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.18.2",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.18.2",
+    "babel-plugin-transform-rename-import": "^2.3.0",
+    "cross-env": "^7.0.3",
+    "fs": "^0.0.1-security",
+    "glob": "^8.0.3",
+    "react-scripts": "5.0.0",
+    "svg-sprite": "^1.5.4",
+    "vinyl": "^2.2.1",
+    "sass": "^1.54.9"
+  }
+}

@@ -1,0 +1,26 @@
+.tip-card-block {
+    display: flex;
+    align-items: center;
+    background: #FFEDCD;
+    border: 1px solid #FFC459;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.tip-card-block h4 {
+    margin: 0;
+    color: #3C5B7E;
+    font-weight: 700;
+    font-size: 16px;
+    margin-left: 10px;
+    line-height: 20px;
+}
+
+.tip-card-block p {
+    margin: 0;
+    color: #3C5B7E;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    margin-left: 10px;
+}

@@ -1,0 +1,343 @@
+@import "../mixins";
+
+.input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #C6D1FF;
+    background-color: #F4F6FF;
+    border-radius: 8px;
+
+    &__body {
+        position: relative;
+        width: 100%;
+    }
+
+    &__label {
+        font-size: 12px;
+        line-height: 16px;
+        vertical-align: top;
+        font-weight: 400;
+        color: #59779A;
+        user-select: none;
+        white-space: nowrap;
+    }
+
+    &__input {
+        width: 100%;
+        padding: 0;
+        border: none;
+        background: none;
+        outline: 0;
+        font-size: 14px;
+        line-height: 22px;
+        vertical-align: middle;
+        font-weight: 600;
+        color: #292929;
+
+        &::placeholder {
+            color: #A8C3E1;
+        }
+
+        &[type="search"] {
+            &::-webkit-search-decoration,
+            &::-webkit-search-cancel-button,
+            &::-webkit-search-results-button,
+            &::-webkit-search-results-decoration {
+                display: none;
+            }
+        }
+    }
+
+    &__action {
+        margin-left: 8px;
+    }
+
+    & > .spinner {
+        position: absolute;
+        bottom: 10px;
+        left: 16px;
+        transform: translateY(-50%);
+    }
+
+    &__icon {
+        position: absolute;
+        top: 50%;
+        width: 20px;
+        height: 20px;
+        transform: translateY(-50%);
+    }
+
+    &__clear-icon {
+        width: 16px !important;
+        height: 16px !important;
+        right: 16px;
+
+        & > svg {
+            width: 100% !important;
+            height: 100% !important;
+        }
+    }
+
+    &__currency {
+        position: absolute;
+        font-size: 16px;
+        color: #292929;
+        font-weight: 400;
+        line-height: 22px;
+        vertical-align: middle;
+        padding-left: 8px;
+        white-space: nowrap;
+    }
+
+    &__hidden-value {
+        position: absolute;
+        top: -1000px;
+        left: -1000px;
+        opacity: 0;
+        font-size: 16px;
+        font-weight: 700;
+        z-index: -100;
+    }
+
+    &--has-label {
+        .input {
+            &__icon {
+                top: 34px;
+            }
+
+            &__clear-icon {
+                top: 27px;
+            }
+        }
+    }
+
+    /* error */
+    &--error {
+        border-color: #ED4242;
+        background-color: #FFF2F2;
+    }
+
+    /* readonly */
+    &--readonly {
+        .input {
+            &__input {
+                cursor: default;
+            }
+            &__action {
+                pointer-events: none;
+            }
+        }
+    }
+
+    &--has-icon {
+        & .input__value-container {
+           margin-left: 24px;
+        }
+    }
+
+    /* disabled */
+    &--disabled {
+        border-color: #E2E2E2;
+        background-color: #F4F4F4;
+        cursor: not-allowed;
+        user-select: none;
+
+        & svg {
+            fill: #B0B0B0 !important;
+        }
+
+        & .input__input {
+            pointer-events: none;
+            cursor: not-allowed;
+        }
+
+        & .input {
+            &__input,
+            &__input::placeholder,
+            &__label,
+            &__currency {
+                color: #B0B0B0 !important;
+            }
+        }
+    }
+
+    /* clearable */
+    &--clearable {
+        & .input__value-container {
+            margin-right: 24px;
+        }
+
+        .input {
+            &__clear-icon {
+                display: flex;
+                position: absolute;
+                right: 12px;
+            }
+        }
+    }
+
+    /* hidden */
+    &--hidden {
+        & > input {
+            position: absolute;
+            width: 0;
+            height: 0;
+        }
+    }
+
+    /* inverted */
+    &--inverted {
+        .input {
+            &__label,
+            &__input {
+                text-align: right;
+            }
+
+            &__currency {
+                position: static;
+            }
+        }
+
+        &.input--clearable {
+            .input__clear-icon {
+                cursor: default;
+                right: 12px;
+
+                & > svg {
+                    fill: #A8C3E1;
+                }
+            }
+        }
+
+        &.input--has-value {
+            .input__clear-icon {
+                cursor: pointer;
+                pointer-events: initial;
+
+                & > svg {
+                    fill: #CC3030;
+                }
+            }
+        }
+    }
+
+    /* focused */
+    &--focused {
+        border-color: #3A5EE5;
+    }
+
+    // types
+    &--type {
+        &--amount {
+            .input {
+                &__input {
+                    color: #5639E0;
+                    font-size: 16px;
+                    font-weight: 700;
+                }
+
+                &__value-container {
+                    display: flex;
+                    position: relative;
+                }
+            }
+        }
+    }
+}
+
+@include desktopRespond() {
+    .input {
+        padding: 16px;
+
+        &__label {
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        &__input {
+            font-size: 15px;
+        }
+
+        &__action {
+            margin-left: 16px;
+        }
+
+        & > .spinner {
+            bottom: 19px;
+        }
+
+        &__icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        &__clear-icon {
+            width: 20px !important;
+            height: 20px !important;
+        }
+
+        &__currency {
+            font-size: 18px;
+        }
+
+        &__hidden-value {
+            font-size: 18px;
+        }
+
+        &--clearable {
+            & .input {
+                &__clear-icon {
+                    right: 16px;
+                }
+
+                &__value-container {
+                    margin-right: 28px;
+                }
+            }
+        }
+
+        &--has-icon {
+            .input__value-container {
+                margin-left: 28px;
+            }
+        }
+
+        &--has-label {
+            .input {
+                &__icon {
+                    top: 44px;
+                }
+
+                &__clear-icon {
+                    top: 35px;
+                }
+            }
+        }
+
+        &--inverted {
+            &.input--clearable {
+                .input__currency {
+                    right: 28px;
+                }
+
+                .input__clear-icon {
+                    right: 16px;
+                }
+            }
+        }
+
+        // types
+        &--type {
+            &--amount {
+                .input {
+                    &__input {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}

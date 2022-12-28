@@ -1,0 +1,143 @@
+@import "../mixins";
+
+.balance-infocard__block {
+    padding: 15px;
+    background: #F4F6FF;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 7px;
+
+        .balance-card-item__block:last-child {
+            border: none;
+        }
+
+        .balance-card-item__block:nth-child(2n) .balance-card-item__amount {
+            justify-content: flex-end;
+        }
+
+        .balance-card-item__block:nth-child(-n+2) {
+            border-bottom: 1px dashed #A8C3E1;
+        }
+
+        .balance-card-item__block:nth-child(2n) {
+            justify-content: flex-end;
+            border-right: none;
+        }
+
+        .balance-card-item__block:nth-child(2n+1) {
+            justify-content: flex-start;
+            border-right: 1px dashed #A8C3E1;
+        }
+
+        .balance-card-item__block:nth-child(2n+1) .balance-card-item__amount {
+            justify-content: flex-start;
+        }
+}
+
+.balance-card-item {
+    h2 {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 20px;
+    }
+
+    &__block {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        border-right: 1px dashed #A8C3E1;
+        width: 50%;
+        padding: 8px;
+
+        * {
+            margin: 0;
+        }
+    }
+
+    &__amount {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 30px;
+        display: flex;
+        align-items: flex-end;
+
+        span {
+            color: #292929;
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+
+    &__usdPrice {
+        font-size: 14px !important;
+        font-weight: 400;
+
+        span {
+            color: #292929;
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+
+    &__token {
+        display: flex;
+        align-items: center;
+
+        .coin-icon {
+            margin-right: 4px;
+        }
+    }
+}
+
+.balance-usd__symbol {
+    font-size: 14px;
+    margin-right: 4px;
+    margin-bottom: -1px;
+}
+
+.balance__symbol {
+    margin-left: 4px;
+    margin-bottom: -1px;
+}
+
+@include desktopRespond() {
+    .balance-card-item {
+        &__block {
+            width: 25%;
+        }
+
+        &__amount{
+            font-size: 24px;
+        }
+    }
+    
+    .balance-card__token h2 {
+        font-size: 16px;
+    }
+
+    .balance-usd__symbol {
+        font-size: 18px;
+    }
+
+    .balance-infocard__block {
+        .balance-card-item__block:nth-child(-n+2) {
+            border-bottom: none;
+        }
+        .balance-card-item__block:nth-child(2n+1) {
+            justify-content: center;
+        }
+        .balance-card-item__block:nth-child(2n)  {
+            justify-content: center;
+            border-right: 1px dashed #A8C3E1;
+        }
+        .balance-card-item__block:last-child {
+            border: none;
+        }
+        .balance-card-item__block:nth-child(2n) .balance-card-item__amount {
+            justify-content: flex-start;
+        }
+    }
+}

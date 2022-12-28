@@ -1,0 +1,30 @@
+.swap-confirm-block {
+    border-radius: 8px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+
+    span {
+        color: rgba(107, 147, 192, 1);
+        font-weight: 300;
+        margin: 0;
+    }
+
+    &__balance {
+        font-weight: 700;
+        margin: 0;
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    &__name {
+        margin: 0;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    &__right {
+        margin-left: 8px;
+    }
+}

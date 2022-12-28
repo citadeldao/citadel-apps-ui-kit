@@ -1,0 +1,51 @@
+@import "input.scss";
+
+.datepicker {
+    width: 100%;
+    font-weight: 600;
+    font-size: 14px;
+
+    .input {
+        cursor: pointer;
+
+        &__input {
+            cursor: pointer;
+        }
+
+        &:focus-within {
+            border-color: #3A5EE6;
+        }
+    }
+
+    &.DatePicker {
+        z-index: initial;
+    }
+
+    .DatePicker__calendarContainer {
+        z-index: 1;
+    }
+}
+
+.datepicker .datepicker-calendar {
+    filter: drop-shadow(0px 5px 20px rgba(15, 86, 179, 0.2));
+}
+
+.datepicker .range-start {
+    background-color: #1A53F0;
+}
+
+.datepicker .range-end {
+    background-color: #FFF;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    color: #000;
+}
+
+.datepicker .range-start, .datepicker .range-end {
+    margin: 0;
+}
+
+.datepicker .range-between {
+    background: rgba(197, 220, 250, 0.5);
+    color: #000;
+    margin: 0;
+}

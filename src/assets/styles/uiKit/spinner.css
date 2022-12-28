@@ -1,0 +1,40 @@
+.spinner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.spinner-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #00B2FE;
+}
+
+.spinner-dot:not(:last-child){
+  margin-right: 6px;
+}
+
+.spinner--disabled > .spinner-dot {
+  background-color: #B0B0B0;
+}
+
+.spinner-dot__1 {
+  animation: spin .4s ease 0s infinite alternate;
+}
+.spinner-dot__2 {
+  animation: spin .4s ease .2s infinite alternate;
+}
+.spinner-dot__3 {
+  animation: spin .4s ease .4s infinite alternate;
+}
+
+@keyframes spin {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: .25;
+  }
+}

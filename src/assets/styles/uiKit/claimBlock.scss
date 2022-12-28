@@ -1,0 +1,116 @@
+@import "../mixins";
+
+.claim-item-card {
+    background: #F4F6FF;
+    border-radius: 4px;
+    padding: 16px;
+    transition: .5s;
+}
+
+.pool-item-token {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 14px;
+}
+
+.pool-item-token * {
+    margin: 0;
+}
+
+.pool-item-token-content {
+    display: flex;
+    align-items: center;
+}
+
+.apr-amount {
+    font-size: 14px;
+    font-weight: 700;
+    color: #0095D6;
+    margin: 0 5px;
+}
+
+.pool-item-token-pool, .double-icon {
+    margin-left: 11px;
+}
+
+.pool-token-name {
+    color: #292929;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.pool-name {
+    color: #3C5B7E;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.pool-item-fee p {
+    display: flex;
+    align-items: baseline;
+    color: #3C5B7E;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.claim-item-block {
+    display: flex;
+    align-items: center;
+}
+
+.claim-item-block p {
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.claim-item-balance {
+    color: #5639E0;
+}
+
+.claim-item-symbol {
+    color: #292929;
+    font-weight: 400;
+}
+
+.claim-item-block .mini-btn-container .mini-btn{
+    text-transform: capitalize !important;
+}
+
+/* pool item info */
+.pool-item-info {
+    padding-top: 5px;
+    border-top: 1px dashed #A1ACB8;
+}
+
+.pool-info-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pool-info-text {
+    margin: 0;
+    line-height: 20px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #59779A;
+}
+
+.text-align-end {
+    text-align: end;
+}
+
+@include desktopRespond() {
+    .pool-info-text {
+        font-size: 16px;
+        line-height: 30px;
+    }
+    .pool-item-fee p {
+        font-size: 16px;
+    }
+    .apr-amount {
+        font-size: 20px;
+    }
+}

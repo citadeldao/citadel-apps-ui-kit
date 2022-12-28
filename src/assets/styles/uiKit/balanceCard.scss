@@ -1,0 +1,89 @@
+@import "../mixins";
+
+.balance-card-block * {
+    margin: 0;
+}
+
+.balance-card-block {
+    background: #F4F6FF;
+    border-radius: 4px;
+    transition: .5s;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 15px;
+}
+
+.balance-card-block p{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    color: #6B93C0;
+}
+
+.balance-card-block:hover {
+    background: #FFFFFF;
+}
+
+.balance-card-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.balance-token-block {
+    margin-left: 11px;
+    width: 100%;
+}
+
+.balance-token-name {
+    font-size: 16px;
+    color: #292929;
+    font-weight: 400;
+}
+
+.balance-token-block .balance-block .balance-bolder{
+    font-weight: 700;
+    color: #59779A;
+}
+
+.balance-usd-block {
+    margin-left: 0px;
+}
+
+.balance-usd-block span {
+    color:  #00B2FE;
+}
+
+.balance-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.balance-card-container:not(:last-child) {
+    border-bottom: 1px dashed #C6D1FF;
+}
+
+@include desktopRespond() {
+    .balance-usd-block {
+        margin-left: 24px;
+    }
+
+    .balance-card-block {
+        padding: 15px;
+    }
+
+    .balance-card-container {
+        width: 50%;
+        padding: 0;
+        border-bottom: none !important;
+    }
+
+    .balance-block {
+        justify-content: flex-start;
+    }
+}

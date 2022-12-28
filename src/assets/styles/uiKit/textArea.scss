@@ -1,0 +1,97 @@
+@import "../mixins";
+
+.textarea {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 8px 12px;
+    background: #F4F6FF;
+    border: 1px solid #C6D1FF;
+    border-radius: 8px;
+    height: max-content;
+    overflow: auto;
+
+    &:focus-within {
+        border-color: #3A5EE5;
+    }
+}
+
+.textarea > textarea {
+    width: 100%;
+    height: auto;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 14px;
+    line-height: 1.5;
+    vertical-align: middle;
+    font-weight: 600;
+    overflow: auto;
+    resize: none;
+}
+
+.textarea > textarea::-webkit-scrollbar {
+    width: 4px;
+    cursor: default;
+}
+
+.textarea > textarea::placeholder {
+    color: #A8C3E1;
+}
+
+.textarea__label {
+    font-size: 12px;
+    line-height: 1.5;
+    font-weight: 400;
+    vertical-align: top;
+    color: #59779A;
+    user-select: none;
+}
+
+.textarea > .spinner {
+    position: absolute;
+    margin-top: 10px;
+}
+
+/* error */
+.textarea--error {
+    border-color: #ED4242;
+    background-color: #FFF2F2;
+}
+
+/* readonly */
+.textarea--error {
+   pointer-events: none;
+}
+
+/* disabled */
+.textarea--disabled {
+    cursor: not-allowed;
+    border-color: #E2E2E2;
+    background-color: #F4F4F4;
+}
+
+.textarea--disabled > textarea {
+    pointer-events: none;
+    cursor: not-allowed;
+    color: #B0B0B0;
+}
+
+.textarea--disabled > .textarea__label {
+    color: #B0B0B0;
+}
+
+@include desktopRespond() {
+    .textarea {
+        padding: 16px;
+    }
+
+    .textarea__label {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .textarea > textarea {
+        font-size: 15px;
+    }
+}

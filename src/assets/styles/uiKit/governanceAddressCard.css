@@ -1,0 +1,11 @@
+.governance-address-card {
+    padding: 12px;
+}
+
+.governance-address-card .card-address-name {
+    font-weight: 700;
+}
+
+.governance-address-card .card-address {
+    color: #6B93C0;
+}

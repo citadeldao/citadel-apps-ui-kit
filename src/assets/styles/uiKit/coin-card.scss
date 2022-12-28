@@ -1,0 +1,28 @@
+@import "../mixins";
+
+.coin-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+
+    & .coin-icon > svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@include desktopRespond() {
+    .coin-card {
+        width: 48px;
+        height: 48px;
+
+        & .coin-icon > svg {
+            width: 32px;
+            height: 32px;
+        }
+    }
+}

@@ -1,0 +1,107 @@
+@import "../mixins";
+
+.tab__header {
+    background: #E5EDF5;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px;
+    width: 100%;
+    margin-bottom: 16px;
+    overflow-x: auto;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none; 
+}
+
+.tab__header::-webkit-scrollbar { 
+    display: none;
+}
+
+.line-tab__header::-webkit-scrollbar { 
+    display: none;
+}
+
+
+.tab .tab__button {
+    background: transparent;
+    border-radius: 50px;
+    height: 35px;
+    border: none;
+    color: #6B93C0;
+    font-weight: 700;
+    font-size: 14px;
+    transition: .3s;
+    white-space: nowrap;
+    min-width: max-content;
+    padding-right: 14px;
+    padding-left: 14px;
+}
+
+.tab .tab__button:hover {
+    background: #6B93C0;
+    color: #FFFFFF;
+}
+
+.tab #active-tab {
+    background: #0095D6;
+    color: #FFFFFF;
+}
+
+.tab__content {
+    width: 100%;
+}
+
+.line-tab__header {
+    background: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px;
+    margin-bottom: 16px;
+    width: 100%;
+    color: #A8C3E1;
+    overflow-x: auto;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none; 
+}
+
+.line-tab .line-tab__button {
+    background: transparent;
+    height: 35px;
+    border: none;
+    color: #A8C3E1;
+    font-weight: 700;
+    font-size: 14px;
+    border-bottom: 2px solid #F4F6FF;
+    min-width: max-content;
+    padding-right: 14px;
+    padding-left: 14px;
+    border-radius: 0;
+}
+
+.line-tab .line-tab__button:hover {
+    border-bottom: 2px solid #C6D1FF;
+    color: #7C63F5;
+}
+
+.line-tab #active-tab {
+    border-bottom: 2px solid #A18EFF;
+    color: #292929;
+}
+
+.line-tab__content {
+    width: 100%;
+}
+
+@include desktopRespond() {
+    .tab .tab__button,
+    .line-tab .line-tab__button {
+        font-size: 16px;
+    }
+
+    .line-tab__header,
+    .tab__header {
+        margin-bottom: 24px;
+    }
+}

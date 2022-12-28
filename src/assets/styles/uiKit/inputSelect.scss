@@ -1,0 +1,88 @@
+@import "../mixins";
+
+.input-select {
+    display: flex;
+    justify-content: space-between;
+
+    border: 1px solid #C6D1FF;
+    border-radius: 8px;
+    background-color: #F4F6FF;
+
+    &:has(.input--focused) {
+        border-color: #3A5EE5;
+    }
+
+    // clickable select container
+    &__select {
+        cursor: pointer;
+    }
+
+    & .input,
+    & .select-control {
+        border: none;
+        background: none;
+    }
+
+    // select
+    & .select {
+        &__options {
+            width: auto;
+        }
+    }
+
+    & .select-control {
+        padding: 8px 8px 8px 12px;
+
+        &__value {
+            display: inline-flex;
+            position: relative;
+            padding-right: 16px;
+            font-weight: 700;
+        }
+
+        &__angle {
+            width: 12px;
+            height: 12px;
+            right: 0;
+            transform: translate(0, -50%);
+        }
+    }
+
+    // input
+    & .input {
+        padding-left: 4px;
+
+        &__currency {
+            font-size: 14px;
+        }
+    }
+
+    &--disabled {
+        * {
+            cursor: not-allowed;
+        }
+    }
+}
+
+@include desktopRespond() {
+    .input-select {
+        & .select-control {
+            &__value {
+                padding-right: 32px;
+            }
+
+            &__angle {
+                width: 16px;
+                height: 16px;
+                right: 0;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        .input {
+            &__currency {
+                font-size: 16px;
+            }
+        }
+    }
+}

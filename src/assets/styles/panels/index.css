@@ -1,0 +1,98 @@
+.base-input-panel {
+    margin: 20px;
+}
+
+.base-input {
+    margin-bottom: 20px;
+}
+
+.panel, .guides-panel{
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.main-panel > .guides-panel{
+    padding: 20px;
+    height: 100vh;
+}
+
+.info-panel .guides-panel{
+    padding: 0 !important;
+    height: none;
+    overflow: hidden;
+}
+
+.fixed-header, .tabbar {
+    flex: 0 0 auto;
+}
+
+#main-view{
+    display: flex;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    justify-content: space-between;
+    background: transparent;
+    align-items: center;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.main-panel, .info-panel{
+    width: 48%;
+    position: relative;
+    overflow: hidden;
+    background: #FFFFFF;
+    overflow-y: auto;
+    border-radius: 16px;
+    height: 100%;
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    box-shadow: 0px 10px 10px rgba(80, 100, 124, 0.1), 0px 10px 10px rgba(80, 100, 124, 0.11);
+} 
+
+.heading-text-h3{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+    margin: 0;
+}
+
+.panel-header-line{
+    background: #3C356D;
+    height: 12px;
+    width: 100%;
+}
+
+.menu-text {
+    margin: 10px;
+}
+
+@media screen and (max-width: 1020px){
+    #main-view {
+        justify-content: center;
+    }
+
+    .main-panel {
+        width: 780px;
+    }
+
+    .info-panel {
+        display: none;
+        width: 100%;
+        margin: 0;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .main-panel{
+        width: 100%;
+        box-shadow: none;
+        height: 100%;
+        margin: 0;
+    }
+}

@@ -1,0 +1,243 @@
+@import "../mixins";
+
+.autocomplete {
+    position: relative;
+
+    &__values {
+        display: flex;
+        flex-wrap: wrap;
+        padding-right: 28px;
+    }
+
+    &--has-values .input--has-icon {
+        .input__icon {
+            top: 40px;
+        }
+
+        .autocomplete-value:first-child {
+            margin-left: 25px;
+        }
+    }
+
+    &--expanded {
+        .autocomplete-options {
+            display: block;
+        }
+
+        .autocomplete__control {
+            border-color: #3A5EE5;
+        }
+    }
+
+    /* disabled */
+    &--disabled .autocomplete-control {
+        cursor: not-allowed;
+    }
+
+    &--disabled * {
+        color: #B0B0B0 !important;
+        fill: #B0B0B0 !important;
+    }
+
+    /* readonly */
+    &--readonly {
+        pointer-events: none;
+    }
+
+    &--multiple {
+        .autocomplete-options {
+            padding-top: 0;
+        }
+    }
+}
+
+.autocomplete-value {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    margin: 4px 4px 0 0;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background-color: #B7F6FF;
+
+    &__icon {
+        width: 16px;
+        height: 16px;
+        fill: #0095D6;
+        margin-right: 8px;
+    }
+
+    &__text {
+        font-size: 12px;
+        font-weight: 600;
+        color: #292929;
+        line-height: 1.5;
+        padding-right: 8px;
+        vertical-align: middle;
+    }
+
+    &__close {
+        width: 8px;
+        height: 8px;
+        fill: #0095D6;
+        cursor: pointer;
+    }
+}
+
+.autocomplete-options {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    display: none;
+    border: 1px solid #3a5ee6;
+    padding: 8px 0;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 4px 15px rgb(107 147 192 / 20%);
+    z-index: 1;
+    overflow: hidden;
+
+    &__wrapper {
+        max-height: 250px;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #3C5B7E;
+            border-radius: 4px;
+        }
+    }
+
+    &__input {
+        width: 100%;
+        padding: 8px 16px;
+        border: 1px solid #C6D1FF;
+        background-color: #F4F6FF;
+        border-radius: 8px;
+        font-size: 14px;
+        line-height: 1.5;
+        font-weight: 600;
+        vertical-align: middle;
+        color: #292929;
+        margin-bottom: 8px;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__placeholder {
+        font-size: 14px;
+        color: #B0B0B0;
+        padding: 8px 16px;
+    }
+}
+
+.autocomplete-option {
+    display: flex;
+    align-items: center;
+    min-height: 32px;
+    padding: 0 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #3C5B7E;
+    text-transform: capitalize;
+    user-select: none;
+    cursor: pointer;
+
+    &:not(.autocomplete-option--active):hover {
+        color: #292929;
+    }
+
+    &:hover {
+        background-color: #e5edf5;
+    }
+
+    &__icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+    }
+
+    &--active {
+        color: #0095D6;
+
+        .autocomplete-option {
+            &__icon,
+            &--active svg {
+                fill: #0095D6;
+            }
+        }
+    }
+}
+
+@include desktopRespond() {
+    .autocomplete {
+        &--has-values .input--has-icon {
+            .input__icon {
+                top: 52px;
+            }
+
+            .autocomplete-value:first-child {
+                margin-left: 25px;
+            }
+        }
+    }
+
+    .autocomplete-control {
+        height: 72px;
+
+        &__label {
+            font-size: 14px;
+        }
+
+        &__icon {
+            width: 40px;
+            height: 40px;
+        }
+
+        &__value,
+        &__placeholder {
+            font-size: 16px;
+        }
+    }
+
+    .autocomplete-value {
+        padding: 8px;
+
+        &__text {
+            font-size: 14px;
+        }
+
+        &__close {
+            width: 12px;
+            height: 12px;
+        }
+
+        &__icon {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .autocomplete-options {
+        &__input {
+            font-size: 15px;
+        }
+    }
+
+    .autocomplete-option {
+        min-height: 40px;
+        font-size: 15px;
+
+        &__icon {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}

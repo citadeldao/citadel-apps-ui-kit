@@ -1,0 +1,27 @@
+.limit__card {
+    background: #e2e2e2;
+    border-radius: 2px;
+    height: 10px;
+    position: relative;
+    width: 100%;
+
+    &--active, &--double {
+        height: 10px;
+        position: absolute;
+        border-radius: 2px;
+        transition: 1s;
+        z-index: 2;
+    }
+    &--double {
+        opacity: 0.5;
+        z-index: 1;
+    }
+}
+
+.limit__card__limit {
+    position: absolute;
+    background-color: #EA2929;
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+}

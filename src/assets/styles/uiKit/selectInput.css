@@ -1,0 +1,261 @@
+.select-token-input-block {
+    padding: 10px 16px;
+    border: 1px solid #C6D1FF;
+    background-color: #F4F6FF;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.select-token-input-block .token-container img, .select-token-input-block .token-container .coin-icon{
+    width: 40px;
+    height: 40px;
+    left: 10px;
+    position: absolute;
+}
+
+.address-input-block:focus-within {
+    border: 1px solid #3A5EE5;
+}
+
+.select-token-input-block .token-container .select-token {
+    margin-left: 40px;
+}
+
+.token-container {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    width: auto;
+    cursor: pointer;
+}
+
+.select-token {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    margin-left: 10px;
+}
+
+.input-txt {
+    color: #59779A;
+    font-size: 14px;
+    margin: 0;
+    white-space: nowrap;
+    width: max-content;
+}
+
+.token-name-container {
+    display: flex;
+    align-items: center;
+    width: max-content;
+}
+
+.token-name-container .token-name {
+    margin: 0;
+    color: #292929;
+    font-size: 18px;
+}
+
+.token-name-container svg {
+    margin-left: 8px;
+}
+
+.amount-container {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.token-procent-span{
+    color: #6B93C0;
+    margin-left: 4px;
+    font-weight: 400;
+}
+
+
+.token-procent-span h2{
+    color: #D900AB !important;
+    display: inline;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.token-input {
+    display: flex;
+    align-items: baseline;
+}
+
+.amount-input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.amount-input-container input {
+    border: none;
+    font-size: 18px;
+    padding-left: 10px;
+    outline: none;
+    text-align: right;
+    width: 100%;
+    color: #5639E0;
+    font-weight: 700;
+    background: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.balance-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.balance-block {
+    display: flex;
+    align-items: baseline;
+}
+
+.balance-container p, .view-balance-show-txt {
+    font-size: 14px;
+    font-weight: 700;
+    color: #3C5B7E;
+}
+
+.balance-container .balance-symbol {
+    font-size: 14px;
+    color: #59779A;
+    font-weight: 400;
+}
+
+.balance-container .view-balance-txt {
+    color: #D900AB;
+    font-size: 14px;
+    font-weight: 700;
+    border-bottom: 1px dashed #D900AB;
+    cursor: pointer;
+}
+
+.balance-container .balance-symbol-txt {
+    margin-bottom: 2px;
+    padding-right: 5px;
+    color: #6B93C0;
+}
+
+.amount-input-container:focus-within {
+    cursor: pointer;
+}
+
+.amount-container .mini-btn-container {
+    margin-left: 15px;
+}
+
+div .balance-container *{
+    margin: 0;
+}
+
+.from-balance {
+    margin-bottom: 8px;
+}
+
+.to-balance {
+    margin-top: 8px;
+}
+/* select input */
+
+.select-token-container .select-options {
+    position: absolute;
+    margin: 0 0 0 40px;
+    padding: 16px 10px;
+    max-height: 200px;
+    overflow-y: scroll;
+    background: #FFFFFF;
+    border: 1px solid #3A5EE6;
+    box-shadow: 0px 4px 15px rgba(107, 147, 192, 0.2);
+    border-radius: 8px;
+    box-sizing: border-box;
+    width: 25%;
+    display: block;
+}
+
+.select-token-container .select-options img {
+    width: 24px;
+    margin-right: 8px;
+    margin-left: 0;
+}
+.select-options .active {
+    background-color: #F1EEFF;
+}
+
+.dropdownEle{
+    display: flex;
+    align-items: center;
+    height: 30px;
+}
+
+.select-token-container{
+    position: relative;
+}
+
+.token-container .coin-icons {
+    width: 40px !important;
+}
+
+.balance-container .gray-txt {
+    color: #6B93C0;
+}
+
+.default-select-token {
+    display: flex;
+    align-items: center;
+}
+
+.default-select-token .input-txt {
+    color: #59779A;
+    font-size: 18px !important;
+    font-weight: 400;
+}
+
+.default-select-block {
+    padding: 16px !important;
+}
+
+.select-input-currency {
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 600px) {
+    .double-container {
+        flex-wrap: wrap;
+        width: 100% !important;
+        justify-content: center;
+    }
+    .double-select-block {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100% !important;
+    }
+    .double-input-span {
+        margin: 8px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .balance-symbol-txt, .balance-symbolt{
+        font-size: 14px;
+    }
+}

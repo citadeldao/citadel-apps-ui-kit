@@ -1,0 +1,10 @@
+.percentage-line {
+    display: flex;
+    width: 100%;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.percentage-line__part {
+    height: 16px;
+}

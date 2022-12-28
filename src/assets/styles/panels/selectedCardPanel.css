@@ -1,0 +1,17 @@
+.selected-cards-panel {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.radio__block {
+    display: flex;
+    flex-direction: column;
+}
+
+.radio__title, .radio__amount{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

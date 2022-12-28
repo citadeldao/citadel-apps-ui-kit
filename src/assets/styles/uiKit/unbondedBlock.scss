@@ -1,0 +1,85 @@
+@import "../mixins";
+
+.unbonded-block {
+    background: #F4F6FF;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    padding: 16px;
+}
+
+.unbonded-block__info {
+    display: flex;
+    flex-direction: column;
+}
+
+.unbonded-card-item-block *, .unbonded-block__info * {
+    margin: 0;
+}
+
+.unbonded-card-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.unbonded-card__token h2 {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.unbonded-block__no {
+    margin: 0;
+    color: #CBCBCB;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.unbonded-card-item-span {
+    width: 100%;
+    height: 50px;
+    margin: 8px 0;
+}
+
+.unbonded-card-item-block {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.unbonded-card-item-span {
+    height: 0px;
+    border: 1px dashed #A8C3E1;
+}
+
+@include desktopRespond() {
+    .unbonded-block {
+        padding: 0px 24px;
+        height: 80px;
+    }
+    .unbonded-block__info{
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        flex-direction: row;
+    }
+    .unbonded-card-item-block {
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+    }
+    .unbonded-card-item-span {
+        border: none;
+        margin: 0;
+    }
+    .unbonded-card__token h2 {
+        font-size: 18px;
+        font-weight: 700;
+    }
+}

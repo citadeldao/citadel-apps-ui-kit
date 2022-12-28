@@ -1,0 +1,253 @@
+.splash-container {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    z-index: 24;
+    background-size: cover !important;
+    background-repeat: no-repeat;
+}
+
+.circle-4 {
+    width: 140vh;
+    height: 140vh;
+    border-radius: 50%;
+    position: absolute;
+    left: 10%;
+    overflow: hidden;
+    margin-top: -160px;
+    z-index: 1;
+}
+
+.circle-3 {
+    width: 120vh;
+    height: 120vh;
+    border-radius: 50%;
+    position: absolute;
+    left: 25%;
+    overflow: hidden;
+    margin-top: -90px;
+    z-index: 1;
+}
+
+.circle-2 {
+    width: 120vh;
+    height: 120vh;
+    border-radius: 50%;
+    position: absolute;
+    left: 40%;
+    overflow: hidden;
+    margin-top: -90px;
+    z-index: 1;
+}
+
+.circle-1 {
+    width: 120vh;
+    height: 120vh;
+    border-radius: 50%;
+    position: absolute;
+    left: 55%;
+    overflow: hidden;
+    margin-top: -90px;
+    display: flex;
+    align-items: center;
+    z-index: 3;
+}
+
+.splash-container .custom-icon {
+    position: absolute;
+    z-index: 30;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-delay: 1.4s;
+    animation-name: fadeInRight;
+    top: 40%;
+    right: 10%;
+    width: 22%;
+    height: 22%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.splash-container .custom-icon img {
+    width: 100%;
+}
+
+.splash-content {
+    position: absolute;
+    top: 40%;
+    left: 11%;
+    width: 45%;
+    z-index: 20;
+}
+
+.splash-content * {
+    margin: 0;
+}
+
+.splash-content h1 {
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 90px;
+    margin-bottom: 10px;
+}
+
+.splash-content p {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 32px;
+    width: 100%;
+}
+
+.animate {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.one {
+    animation-delay: 0.4s;
+}
+
+.two {
+    animation-delay: 1.0s;
+}
+
+.three {
+    animation-delay: 1.6s;
+}
+
+.four {
+    animation-delay: 2.2s;
+}
+
+/*==== FADE IN RIGHT ===*/
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translate3d(100%, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.fadeInRight {
+    animation-name: fadeInRight;
+}
+
+
+@media screen and (max-width: 600px) {
+    .splash-container {
+        background-image: none;
+    }
+
+    .circle-1 {
+        width: 120%;
+        height: 70vh;
+        bottom: -40%;
+        left: -8%;
+    }
+
+    .circle-2 {
+        width: 120%;
+        height: 70vh;
+        left: -8%;
+        bottom: -25%;
+    }
+
+    .circle-3 {
+        width: 120%;
+        height: 70vh;
+        left: -8%;
+        bottom: -8%;
+    }
+
+    .circle-4 {
+        width: 130%;
+        height: 85vh;
+        left: -13%;
+        bottom: -4%;
+    }
+
+    .splash-content {
+        bottom: 10%;
+        width: 70%;
+        text-align: center;
+        top: auto;
+        left: 15%;
+    }
+
+    .splash-content h1 {
+        font-size: 32px;
+        line-height: 38px;
+    }
+
+    .splash-content p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .splash-container .custom-icon {
+        top: 30%;
+        animation-duration: 1.5s;
+        animation-fill-mode: both;
+        animation-delay: 1s;
+        animation-name: fadeToDown;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+    }
+
+    @keyframes fadeToDown {
+        from {
+            top: -110%;
+            transform: translate3d(0, 100%, 0);
+        }
+
+        to {
+            transform: none;
+        }
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translate3d(0, 100%, 0);
+        }
+
+        to {
+            opacity: 1;
+            transform: none;
+        }
+    }
+
+    .fadeInRight {
+        animation-name: fadeInUp;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .splash-content h1 {
+        font-size: 30px;
+        line-height: 42px;
+    }
+
+    .splash-content p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    .splash-content {
+        bottom: 8%;
+    }
+}

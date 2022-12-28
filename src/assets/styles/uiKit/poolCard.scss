@@ -1,0 +1,153 @@
+@import "../mixins";
+
+.pool-card-container {
+    background: #F4F6FF;
+    border-radius: 4px;
+    padding: 16px;
+    position: relative;
+}
+
+.pool-card-token {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.pool-card-token-row {
+    width: 49%;
+}
+
+.baseline {
+    align-items: baseline;
+}
+
+.pool-card-token * {
+    margin: 0;
+}
+
+.pool-card-third-column {
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+.pool-card-token-left-content{
+    display: flex;
+    align-items: center;
+}
+
+.pool-card-token-left-block {
+    margin-left: 11px;
+}
+
+.pool-card-token-title {
+    margin-bottom: 24px;
+    color: #59779A;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.pool-card-token-title-bold {
+    margin-bottom: 10px;
+    color: #59779A;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: right;
+}
+
+.pool-card-token-row .pool-deadline {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: right;
+    color: #0070A0;
+}
+
+.pool-card-token-row .pool-dealine-days{
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 24px;
+    text-align: right;
+    color: #FF5722;
+}
+
+.pool-card-token-row .pool-dealine-days span{
+    font-weight: 400;
+    color: #3C5B7E;
+}
+
+.pool-card-token-block-amount {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+.pool-card-token-block-amount span {
+    color: #292929;
+    font-weight: 400 !important;
+}
+
+.pool-card-token-block-usd {
+    font-size: 12px;
+    color: #00B2FE;
+    font-weight: 600;
+    line-height: 22px;
+}
+
+.pool-card-token-block-usd span{
+    color: #292929;
+}
+
+.pool-card-token-row .mini-btn-container .mini-btn {
+    text-transform:capitalize !important;
+}
+
+/* pool card info */
+.pool-card-info {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px dashed #A1ACB8;
+}
+
+.pool-card-mobile-column{
+    display: flex;
+    width: 100% !important;
+    margin-top: 16px;
+    justify-content: space-between;
+}
+
+.pool-mobile-row, .pool-mobile-row-claim{
+    position: absolute;
+    right: 16px;
+    top: 16px;
+}
+
+.pool-mobile-row{
+    top: 16px;
+}
+
+.pool-mobile-row > svg {
+    fill: #CC3030;
+}
+
+@include desktopRespond() {
+    .pool-card-token-row {
+        width: 32%;
+    }
+    .pool-card-third-column {
+        display: flex;
+    }
+    .pool-mobile-row, .pool-mobile-row-claim {
+        position: absolute;
+        right: 16px;
+        top: 52px;
+    }
+    .pool-card-mobile-column {
+        display: none;
+    }
+    .pool-card-token-title, .pool-card-token-title-bold, .pool-card-token-row .pool-deadline {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,138 @@
+@import "../mixins";
+
+.pool-item-card {
+    background: #F4F6FF;
+    border-radius: 4px;
+    padding: 16px;
+    transition: .5s;
+    cursor: pointer;
+    position: relative;
+}
+
+.pool-item-token {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 14px;
+}
+
+.pool-item-token * {
+    margin: 0;
+}
+
+.super-fluid-apr-block {
+    margin-left: 4px !important;
+}
+
+.pool-item-token-content {
+    display: flex;
+    align-items: center;
+}
+
+.pool-item-token-pool, .double-icon {
+    margin-left: 11px;
+}
+
+.pool-token-name {
+    color: #292929;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 14px;
+}
+
+.pool-name {
+    color: #3C5B7E;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 22px;
+}
+
+.pool-item-fee div {
+    display: flex;
+    align-items: baseline;
+    color: #3C5B7E;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.pool-item-fee {
+    display: flex;
+    align-items: center;
+    margin-top: 6px !important;
+    position: absolute;
+    right: 16px;
+}
+
+.pool-item-fee .coin-icon {
+    margin-left: 6px;
+    width: 16px;
+}
+
+.apr-amount {
+    font-size: 14px;
+    font-weight: 700;
+    color: #0095D6;
+    margin: 0 5px;
+}
+
+/* pool item info */
+.pool-item-info {
+    padding-top: 5px;
+    border-top: 1px dashed #A1ACB8;
+}
+
+.pool-info-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pool-info-text {
+    margin: 0;
+    line-height: 20px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #59779A;
+}
+
+.text-align-end {
+    text-align: end;
+}
+
+.pool-item-card:hover {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 25px rgba(86, 57, 224, 0.3);
+}
+
+.pool-symbol {
+    color: #A8C3E1;
+}
+
+.pool-info-text span {
+    font-weight: 400;
+}
+
+@include desktopRespond() {
+    .pool-token-name {
+        font-size: 16px;
+    }
+    .pool-name { 
+        font-size: 13px;
+    }
+    .pool-item-fee div {
+        font-size: 16px;
+    }
+    .apr-amount {
+        font-size: 20px;
+    }
+    .pool-item-fee .coin-icon {
+        margin-left: 8px;
+    }
+    .pool-item-fee .custom-icon {
+        width: 10px;
+    }
+    .pool-info-text {
+        line-height: 30px;
+        font-size: 16px;
+    }
+}

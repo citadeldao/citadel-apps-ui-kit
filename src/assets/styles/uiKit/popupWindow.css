@@ -1,0 +1,14 @@
+.popup-window{
+    display: none;
+}
+
+.active-popup{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+    z-index: 1;
+    box-sizing: border-box;
+    transition: .5s;
+}

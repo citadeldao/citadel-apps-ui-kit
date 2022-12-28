@@ -1,0 +1,74 @@
+@import "../mixins";
+
+.form-group-balance {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 8px 0;
+  font-size: 12px;
+  font-weight: 700;
+
+  &__block {
+    display: flex;
+    color: #3C5B7E;
+  }
+
+  &__text,
+  &__currency {
+    color: #6B93C0;
+    font-weight: 400;
+  }
+
+  &__text::after,
+  &__currency::before {
+    content: ' ';
+    white-space: break-spaces;
+  }
+
+  &__secret {
+    position: relative;
+    color: #D900AB;
+    cursor: pointer;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      border-bottom: 1px dashed #D900AB;
+    }
+  }
+
+  &__keplr {
+    position: relative;
+    color: #00BFDB;
+  }
+
+  &__kepler-block {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  &__tooltip > .tooltip {
+    background: none;
+    cursor: pointer;
+  }
+
+  &__tooltip > .tooltip > svg {
+    width: 16px;
+    height: 16px;
+    margin-left: 3px;
+  }
+
+  &__tooltip > .tooltip > svg:hover {
+    fill: #002BCC !important;
+  }
+}
+
+@include desktopRespond() {
+  .form-group-balance {
+    font-size: 14px;
+  }
+}

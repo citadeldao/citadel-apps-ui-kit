@@ -1,0 +1,21 @@
+.balance-radio-panel {
+    display: flex;
+}
+
+.long-radio-pannel {
+    display: flex;
+    flex-direction: column;
+}
+
+.long-radio-btn {
+    margin-bottom: 10px;
+}
+
+.checkbox-inline__token {
+    margin-left: 10px;
+}
+
+.checkbox__content {
+    display: flex;
+    align-items: center;
+}

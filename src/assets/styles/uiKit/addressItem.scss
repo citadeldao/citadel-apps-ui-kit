@@ -1,0 +1,60 @@
+@import "../mixins";
+
+.address-item {
+    background: #F4F6FF;
+    border-radius: 4px;
+    padding: 8px 16px 8px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.address-token-block *, .address-token-amount *{
+    margin:  0;
+}
+
+.address-token-block {
+    display: flex;
+    align-items: center;
+}
+
+.address-token-name {
+    margin-left: 10px;
+    color: #292929;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.address-amount-txt {
+    font-size: 14px;
+    font-weight: 400;
+    color: #292929;
+}
+
+.address-amount-txt span {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.address-item:hover {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 25px rgba(86, 57, 224, 0.3);
+}
+
+.active-address {
+    background-color: #3F337D !important;
+}
+
+@include desktopRespond() {
+    .address-amount-txt span, .address-token-name, .address-amount-txt {
+        font-size: 18px;
+    } 
+    .address-amount-txt {
+        font-size: 16px;
+    }
+    .address-amount-txt span {
+        font-size: 20px;
+    }
+}

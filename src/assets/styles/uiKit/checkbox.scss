@@ -1,0 +1,97 @@
+@import "../mixins";
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    cursor: pointer;
+    user-select: none;
+}
+
+.checkbox > input[type="checkbox"] {
+    position: absolute;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.checkbox__checkmark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    width: 20px;
+    margin-right: 8px;
+    border: 1px solid #C3D6EC;
+    border-radius: 2px;
+    background: #fff;
+}
+
+.checkbox__checkmark > svg {
+    display: none !important;
+    fill: #5639E0;
+    width: 13px;
+    height: 13px;
+}
+
+.checkbox__content {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* selected */
+.checkbox--selected .checkbox__checkmark {
+    background: #F1EEFF;
+    border: 1px solid #5639E0;
+}
+
+.checkbox--selected .checkbox__checkmark > svg {
+    display: flex !important;
+}
+
+.checkbox--readonly {
+    pointer-events: none;
+}
+
+/* disabled */
+.checkbox--disabled {
+    cursor: not-allowed;
+}
+
+.checkbox--disabled .checkbox__checkmark {
+    border-color: #C3D6EC;
+    background-color: #E5EDF5;
+}
+
+.checkbox--disabled .checkbox__checkmark > svg {
+    fill: #C3D6EC;
+}
+.checkbox--disabled .checkbox__content {
+    fill: #59779A;
+}
+
+/* inverted */
+.checkbox--inverted {
+    flex-direction: row-reverse;
+}
+
+.checkbox--inverted .checkbox__checkmark  {
+    margin-left: 8px;
+}
+
+@include desktopRespond() {
+    .checkbox__checkmark {
+        width: 24px;
+        height: 24px;
+    }
+
+    .checkbox__checkmark > svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .checkbox__content {
+        font-size: 18px;
+    }
+}

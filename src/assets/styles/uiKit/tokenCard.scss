@@ -1,0 +1,56 @@
+@import "../mixins";
+
+.token-card-container {
+    background: #F1EEFF;
+    border-radius: 4px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.token-card-block * {
+    margin: 0;
+}
+
+.token-card-block {
+    display: flex;
+    align-items: center;
+}
+
+.token-card__pool {
+    margin-left: 11px;
+}
+
+.token-card__pool-label {
+    font-size: 14px;
+    font-weight: 700;
+    font-style: normal;
+    color: #292929;
+    line-height: 20px;
+}
+
+.token-card__usdPrice {
+    font-size: 12px;
+    font-weight: 600;
+    color: #3C5B7E;
+    line-height: 10px;
+}
+
+.token-card__usdPrice span {
+    color: #EA2929 !important;
+}
+
+.token-card-container .mini-btn-container .mini-btn {
+    text-transform: none !important;
+    font-weight: 700 !important;
+}
+
+@include desktopRespond() {
+    .token-card__pool-label { 
+        font-size: 16px;
+    }
+    .token-card__usdPrice {
+        line-height: 24px;
+    }
+}

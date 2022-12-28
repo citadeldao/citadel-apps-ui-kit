@@ -1,0 +1,90 @@
+/* TODO: Add all available fonts */
+
+@font-face {
+  font-family: Panton;
+  src: url(../fonts/Panton-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: Panton;
+  src: url(../fonts/Panton-Light.ttf);
+  font-weight: 300;
+}
+@font-face {
+  font-family: Panton;
+  src: url(../fonts/Panton-SemiBold.ttf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: Panton;
+  src: url(../fonts/Panton-Bold.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Panton;
+  src: url(../fonts/Panton-ExtraBold.ttf);
+  font-weight: 800;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+* { 
+  font-family: Panton;
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box; 
+  -webkit-tap-highlight-color: transparent;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+button{
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.row-end{
+  display: flex;
+  align-items: flex-end !important;
+  justify-content: space-between;
+}
+
+.baseline{
+  display: flex;
+  align-items: baseline !important;
+  justify-content: space-between;
+}
+
+.row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.column{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.column-end{
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  text-align: right;
+}
+
+.relative-panel {
+  position: relative;
+}

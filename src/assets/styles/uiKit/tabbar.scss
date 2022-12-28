@@ -1,0 +1,54 @@
+@import "../mixins";
+
+.tabbar {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    padding: 10px;
+}
+
+.tabbar-item {
+    text-align: center;
+    transition: .5s;
+    cursor: pointer;
+
+    &__text {
+        margin: 0;
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    &__icon {
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        margin-bottom: 6px;
+
+        & > svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+
+@include desktopRespond() {
+    .tabbar-item {
+        &__text {
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        &__icon {
+            width: 32px;
+            height: 32px;
+        }
+    }
+}

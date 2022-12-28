@@ -1,0 +1,86 @@
+@import "../mixins";
+
+.guide-card-block {
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 23px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.guide-card-block * {
+    margin: 0;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.guide-card-title {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.guide-card-right {
+    position: relative;
+}
+
+.guide-card-right svg {
+    display: block;
+}
+
+.guide-card-arrow {
+    left: 50%;
+    position: absolute;
+}
+
+.guide-card-block:hover {
+    transition: .5s;
+}
+
+.guide-card-container {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+}
+
+.second-block {
+    margin-left: 7px;
+}
+
+.guide-card-content-txt {
+    font-size: 11px;
+    font-weight: 400;
+    color: rgba(89, 119, 154, 1);
+    line-height: 14px;
+}
+
+.guide-card-amount-txt {
+    font-size: 16px;
+    color: #0095D6;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.guide-card-amount-txt span {
+    font-size: 14px;
+    font-weight: 400;
+    color: #292929;
+    margin-left: 8px;
+}
+
+@include desktopRespond() {
+    .guide-card-content-txt  {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .guide-card-amount-txt {
+        font-size: 20px;
+    }
+    .guide-card-amount-txt span {
+        font-size: 18px;
+    }
+    .second-block {
+        margin-left: 40px;
+    }
+}

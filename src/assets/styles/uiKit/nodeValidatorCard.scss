@@ -1,0 +1,75 @@
+@import "../mixins";
+
+.node-validator-card-block {
+    padding: 8px;
+    background: #F4F6FF;
+    border-radius: 4px;
+    margin: 8px 0;
+}
+
+.validator-name {
+    display: inline;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    color: #292929;
+    margin-left: 8px;
+}
+
+.validator-fee {
+    font-size: 12px;
+    line-height: 19px;
+    color: #6B93C0;
+    display: inline;
+    font-weight: 300;
+    margin-left: 8px;
+}
+
+.validator-fee span {
+    font-weight: 700;
+    color: #D900AB;
+}
+
+.restake-text {
+    font-size: 12px;
+    line-height: 16px;
+    margin-left: 5px;
+    margin-right: 8px;
+    color: #1C622F;
+    margin-top: 15px;
+    text-align: right;
+    font-weight: 700;
+}
+
+.red-text {
+    color: #8F2222 !important;
+}
+
+.validator-logo-block {
+    background: #7C63F5;
+    border-radius: 4px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.validator-logo-block img {
+    margin: auto;
+    width: 30px;
+    height: 30px;
+}
+
+@include desktopRespond() {
+    .validator-fee{
+        font-size: 16px;
+    }
+    .restake-text{
+        font-size: 16px;
+    }
+    .validator-name{
+        font-size: 18px;
+        line-height: 22px;
+    }
+}

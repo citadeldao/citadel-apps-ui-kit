@@ -1,0 +1,107 @@
+@import "../mixins";
+
+.edit-amount-block * {
+    margin: 0;
+}
+
+.edit-card-net {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.edit-amount-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.edit-amount-row .row {
+    flex-wrap: nowrap;
+}
+
+.edit-card-balance {
+    font-weight: 700;
+    color: #5639E0;
+    font-size: 14px;
+    margin-right: 4px;
+}
+
+.edit-amount-block {
+    background: linear-gradient(90deg, #EEF6FF 0%, #F4E8FF 99%);
+    border-radius: 8px;
+    padding: 15px;
+    transition: .5s;
+}
+
+.edit-amount-block .token-input {
+    border: 1px solid #C6D1FF;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background: #FFFFFF;
+    padding-right: 5px;
+    height: 34px;
+}
+
+.edit-amount-block input {
+    font-weight: 700;
+}
+
+.edit-amount-input-container input {
+    border: none;
+    font-size: 16px;
+    height: 40px;
+    outline: none;
+    text-align: right;
+    width: 100%;
+    color: #5639E0;
+    font-weight: 700;
+    background: none;
+}
+
+.edit-amount-input-container .token-input {
+    display: flex;
+    align-items: center !important;
+}
+
+.edit-amount-btn {
+    margin-left: 10px;
+}
+
+.card-balance {
+    margin-right: 4px;
+}
+
+#amount-error {
+    text-align: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#amount-error p {
+    color: #EA2929;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    margin-left: 8px;
+}
+
+.amount-error__circle {
+    width: 32px;
+    height: 32px;
+    background: #FFE3DA;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@include desktopRespond() {
+    .edit-card-balance {
+        font-size: 20px;
+    }
+    .edit-card-net {
+        font-size: 20px;
+        line-height: 20px;
+    }    
+}

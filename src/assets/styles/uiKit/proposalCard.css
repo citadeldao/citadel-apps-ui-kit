@@ -1,0 +1,150 @@
+.proposal-card {
+    margin-bottom: 10px;
+    padding: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .3s linear;
+}
+
+.proposal-card:hover {
+    box-shadow: 0 15px 50px rgba(80, 100, 124, .1),
+    0 10px 15px rgba(80, 100, 124, .16);
+    background-color: #fff;
+}
+
+.proposal-card--proposal-status-passed {
+    background-color: #D7FFE2;
+}
+
+.proposal-card--proposal-status-deposit-period {
+    background-color: #F1EEFF;
+}
+
+.proposal-card--proposal-status-voting-period {
+    background-color: #F4F6FF;
+}
+
+.proposal-card--proposal-status-failed {
+    background-color: #FFEDCD;
+}
+
+.proposal-card--proposal-status-rejected {
+    background-color: #FFE3DA;
+}
+
+.proposal-card:last-child {
+    margin-bottom: 0;
+}
+
+.proposal-card__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.proposal-card__info {
+    display: inline-flex;
+    align-items: center;
+    font-size: 12px;
+    line-height: 2em;
+    font-weight: 600;
+}
+
+.proposal-card__number {
+    color: #5639E0;
+    padding-right: 5px;
+}
+
+.proposal-card__status {
+    text-transform: capitalize;
+}
+
+.proposal-card__status--passed {
+    color: #0F8932;
+}
+
+.proposal-card__status--voting-period {
+    color: #0095D6;
+}
+.proposal-card__status--deposit-period,
+.proposal-card__status--rejected,
+.proposal-card__status--failed {
+    color: #CC3030;
+}
+
+.proposal-card__network  {
+    display: inline-flex;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.proposal-card__network-name {
+    padding-left: 4px;
+    font-size: 12px;
+    line-height: 2em;
+    font-weight: 600;
+    color: #0095D6;
+}
+
+.proposal-card__title {
+    margin-bottom: 13px;
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 700;
+}
+
+.proposal-card__total {
+    font-size: 16px;
+    font-weight: 400;
+    color: #6B93C0;
+    line-height: 21px;
+    margin-left: 30px;
+    white-space: nowrap;
+}
+
+.proposal-card__total-percent {
+    font-weight: 700;
+}
+.proposal-card__total-percent:after,
+.proposal-card__total-percent:before {
+    content: ' ';
+}
+
+.proposal-card__line {
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.proposal-card__you-vote {
+    margin-bottom: 8px;
+}
+
+.proposal-card__you-vote,
+.proposal-card__time,
+.proposal-card__time-value,
+.proposal-card__category {
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 400;
+    color: #59779A;
+}
+
+.proposal-card__category-value {
+    color: #292929;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.proposal-card__you-vote-value {
+    font-weight: 700;
+}
+
+.proposal-card__you-vote-value--mixed {
+    color: #3A5EE5;
+}
+
+.proposal-card__you-vote-value,
+.proposal-card__you-vote-value--not-voted {
+    color: #6B93C0;
+}
+

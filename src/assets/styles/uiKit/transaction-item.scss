@@ -1,0 +1,131 @@
+@import "../mixins.scss";
+
+.transaction-item {
+    width: 100%;
+    background-color: #E4F3F5;
+    border-radius: 4px;
+    padding: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    transition: .5s;
+}
+
+.transaction-item:last-child{
+    margin-bottom: 0;
+}
+
+.transaction-item__left {
+    display: flex;
+    align-items: center;
+}
+
+.transaction-item__right {
+    text-align: end;
+}
+
+.transaction-item__content {
+    margin-left: 8px;
+}
+
+.transaction-item__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.transaction-item__icon > img {
+    width: 100%;
+}
+
+.transaction-item__title {
+    display: flex;
+    align-items: center;
+}
+
+.transaction-item__title,
+.transaction-item__amount,
+.transaction-item__amount > span {
+    color: #292929;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 14px;
+    text-transform: capitalize;
+}
+
+.transaction-item__status-icon {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 4px;
+}
+
+.transaction-item__status-icon > svg {
+    width: 16px;
+    height: 16px;
+}
+
+.transaction-item__fee > span {
+    font-size: 14px;
+    font-weight: 700;
+    color: #D900AB;
+    margin: 0 3px;
+}
+
+.transaction-item__time,
+.transaction-item__fee {
+    color: #6B93C0;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.transaction-item__fee {
+    align-items: flex-end;
+    display: flex;
+    height: 20px;
+}
+
+.transaction-item__amount--success {
+    color: #0F8932;
+}
+
+.transaction-item__amount--fail {
+    color: #CC3030;
+}
+
+.transaction-item__amount > span {
+    font-weight: 400;
+}
+
+.transaction-item:hover {
+    background: #FFFFFF;
+    box-shadow: 0 4px 25px rgba(86, 57, 224, 0.3);
+}
+
+@include desktopRespond {
+    .transaction-item__icon {
+        width: 48px;
+        height: 48px;
+    }
+    .transaction-item {
+        padding: 16px;
+        margin-bottom: 16px;
+    }
+    .transaction-item__time,
+    .transaction-item__fee {
+        font-size: 14px;
+    }
+    .transaction-item__title,
+    .transaction-item__amount,
+    .transaction-item__amount > span {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .transaction-item__fee {
+        height: 20px;
+    }
+}

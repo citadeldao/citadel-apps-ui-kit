@@ -1,0 +1,117 @@
+@import "../mixins";
+
+.pool-item-dropdown-card {
+    background: #F4F6FF;
+    border-radius: 4px;
+    align-items: center;
+    padding: 16px;
+    transition: .5s;
+}
+
+.pool-item-dropwdown-token * {
+    margin: 0;
+}
+
+.pool-item-dropwdown-token {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pool-item-token-content {
+    display: flex;
+    align-items: center;
+}
+
+.pool-item-token-pool, .double-icon {
+    margin-left: 11px;
+}
+
+.pool-token-name {
+    color: #292929;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.apr-amount {
+    font-size: 14px;
+    font-weight: 700;
+    color: #0095D6;
+    margin: 0 5px;
+}
+
+.pool-name {
+    color: #3C5B7E;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.pool-item-fee p {
+    display: flex;
+    align-items: baseline;
+    color: #3C5B7E;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* pool item info */
+.pool-item-info {
+    padding-top: 5px;
+    border-top: 1px dashed #A1ACB8;
+}
+
+.pool-info-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pool-info-text {
+    margin: 0;
+    line-height: 20px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #59779A;
+} 
+
+.text-align-end {
+    text-align: end;
+}
+
+.pool-item-dropdown-card:hover {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 25px rgba(86, 57, 224, 0.3);
+}
+
+.blue-txt {
+    color: #00B2FE;
+}
+
+.padding-bottom {
+    padding-bottom: 14px;
+}
+
+@include desktopRespond() {
+    .pool-token-name {
+        font-size: 16px;
+    }
+    .pool-name { 
+        font-size: 13px;
+    }
+    .pool-item-fee p {
+        font-size: 16px;
+    }
+    .apr-amount {
+        font-size: 20px;
+    }
+    .pool-item-fee .coin-icon {
+        margin-left: 8px;
+    }
+    .pool-item-fee .custom-icon {
+        width: 10px;
+    }
+    .pool-info-text {
+        line-height: 30px;
+        font-size: 16px;
+    }
+}

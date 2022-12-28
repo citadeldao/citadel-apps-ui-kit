@@ -1,0 +1,130 @@
+.button {
+    border: none;
+    border-radius: 4px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .5s;
+    min-width: max-content;
+    user-select: none;
+}
+
+
+.button--type--default {
+    height: 48px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 16px;
+    border-radius: 25px;
+    background-color: #7C63F5;
+    color: white;
+}
+
+.button--type--small {
+    height: 34px;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 4px;
+    background-color: #C6D1FF;
+    color: #5639E0;
+}
+
+.button--type--long {
+    height: 56px;
+    font-size: 16px;
+    width: 100%;
+    border: 1px solid #6B93C0;
+    border-radius: 4px;
+    background: #F4F6FF;
+    color: #6B93C0;
+}
+
+.button--type--small .button__icon svg{
+    width: 20px;
+    height: 20px;
+}
+
+.button--no-shadow {
+    box-shadow: none !important;
+}
+
+.button--inverted {
+    flex-direction: row-reverse;
+}
+
+.button__icon {
+    margin-right: 8px;
+}
+
+.button--inverted .button__icon {
+    margin: 0 0 0 8px;
+}
+
+.button--round {
+    border-radius: 25px;
+}
+
+.button--type--long:hover {
+    border: 1px solid #A18EFF;
+    background: #C6D1FF;
+    color: #5639E0 !important;
+}
+
+.button__icon--circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: .5s;
+}
+
+.button__icon > svg {
+    width: 16px;
+    height: 16px;
+    transition: .5s;
+}
+
+.button--type--long-edge {
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    padding-left: 16px;
+    padding-right: 10px;
+}
+
+.button__icon--circle > svg {
+    transition: .5s;
+}
+
+.button--disabled, .button--disabled:hover {
+    cursor: not-allowed !important;
+    background: #E5EDF5 !important;
+    color: #A8C3E1 !important;
+    border-color: #E5EDF5 !important;
+    box-shadow: none !important;
+}
+
+.button--disabled .button__icon--circle,
+.button--disabled:hover .button__icon--circle {
+    background-color: #dbe0e4 !important;
+}
+
+.button--disabled .button__icon--circle svg,
+.button--disabled:hover .button__icon--circle svg {
+    fill: #A8C3E1;
+}
+
+.button--type--long:hover .button__icon--circle {
+    background-color: white;
+}
+
+.button--loading {
+    background-color: #E2E2E2 !important;
+}
+
+.button--loading .spinner-dot {
+    background-color: #4A4A4A !important;
+}

@@ -1,0 +1,47 @@
+.icon-button,
+.icon-button:focus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+
+.icon-button:not(.icon-button--type--common) > svg {
+    width: 40%;
+}
+
+/* type round */
+.icon-button--type--round {
+    border-radius: 50%;
+}
+
+/* type hexagon */
+.icon-button--type--hexagon {
+    position: relative;
+    background: black;
+    border: none !important;
+}
+
+.icon-button--type--hexagon > svg {
+    position: absolute;
+    z-index: 1;
+    width: 50%;
+}
+
+.icon-button--type--hexagon__before {
+    position: absolute;
+    top: 1px;  /* border width */
+    left: 1px;  /* border width */
+    height: calc(100% - 2px);  /* 100% - (2 * border width) */
+    width: calc(100% - 2px);  /* 100% - (2 * border width) */
+}
+
+.icon-button--type--hexagon, .icon-button--type--hexagon__before {
+    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}

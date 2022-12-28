@@ -1,0 +1,219 @@
+@import "../mixins";
+
+.address-section-card {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    padding-right: 40px;
+    background: #7C63F5;
+    border-radius: 8px;
+    transition: .5s;
+    cursor: pointer;
+    overflow: hidden;
+    margin: 16px 16px 0;
+
+    &__logo {
+        & > .coin-card {
+            width: 40px;
+            height: 40px;
+            background-color: #fff !important;
+
+            & svg {
+                width: 24px;
+                height: 24px;
+                fill: #5639E0;
+            }
+        }
+    }
+
+    &__token {
+        display: flex;
+        align-items: center;
+        padding: 12px;
+    }
+
+    &__token-info {
+        color: #FFFFFF;
+        margin-left: 12px;
+    }
+
+    &__token-name,
+    &__token-balance {
+        line-height: 20px;
+
+        & > span {
+            color: #C6D1FF;
+            padding-left: 4px;
+        }
+    }
+
+    &__token-name {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    &__token-balance {
+        font-size: 12px;
+        font-weight: 700;
+
+        & > span {
+            font-weight: 400;
+        }
+    }
+
+    &__arrow {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 12px;
+        height: 100%;
+        border-radius: 8px;
+
+        & > svg {
+            fill: #fff;
+        }
+    }
+
+    &:hover {
+        background: #FFFFFF;
+        box-shadow: 0 15px 50px rgba(80, 100, 124, 0.1), 0 10px 15px rgba(80, 100, 124, 0.16);
+
+        .address-section-card {
+            &__logo {
+                & > .coin-card {
+                    background: #5639E0 !important;
+
+                    & svg {
+                        fill: #fff;
+                    }
+                }
+            }
+
+            &__token-name {
+                color: #292929;
+
+                & > span {
+                    color: #6B93C0;
+                }
+            }
+
+            &__token-balance {
+                color: #7C63F5;
+
+                & > span {
+                    color: #6B93C0;
+                }
+            }
+
+            &__arrow {
+                height: 100%;
+
+                & > svg {
+                    fill: #5639E0;
+                }
+            }
+        }
+    }
+
+    &--disabled,
+    &--disabled:hover {
+        background: #F4F6FF;
+        box-shadow: none;
+        cursor: not-allowed;
+
+        .address-section-card {
+            &__logo {
+                & > .coin-card {
+                    background: #A8C3E1 !important;
+
+                    & svg {
+                        fill: #fff;
+                    }
+                }
+            }
+
+            &__token-name {
+                color: #6B93C0;
+
+                & > span {
+                    color: #A8C3E1;
+                }
+            }
+
+            &__token-balance {
+                color: #59779A;
+
+                & > span {
+                    color: #A8C3E1;
+                }
+            }
+
+            &__arrow {
+                background-color: transparent !important;
+
+                & > svg {
+                    fill: #A8C3E1 !important;
+                }
+            }
+        }
+    }
+
+}
+// background: #E5EDF5;
+
+
+@include desktopRespond() {
+    .address-section-card {
+        padding-right: 80px;
+        margin: 24px 24px 0;
+
+        &__logo {
+            & > .coin-card {
+                width: 48px;
+                height: 48px;
+
+                & svg {
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+        }
+
+        &__arrow {
+            background-color: #a18eff;
+            margin-right: 0;
+            padding: 0 24px;
+
+            & > svg {
+                fill: #fff;
+            }
+        }
+
+        &:hover {
+            .address-section-card {
+                &__arrow {
+                    background-color: #7c63f5;
+
+                    & > svg {
+                        fill: #fff;
+                    }
+                }
+            }
+        }
+
+        &--disabled,
+        &--disabled:hover, {
+            .address-section-card {
+                &__arrow {
+                    background-color: #E5EDF5 !important;
+                }
+            }
+        }
+    }
+}

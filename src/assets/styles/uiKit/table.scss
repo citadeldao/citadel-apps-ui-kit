@@ -1,0 +1,52 @@
+@import "../mixins";
+
+.table {
+    width: 100%;
+
+    &__row {
+        display: flex;
+        overflow: hidden;
+        border-radius: 4px;
+        margin-bottom: 4px;
+        background-color: #F4F6FF;
+
+        &:last-child:not(.table__header .table__row) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__cell {
+        flex: 1;
+        padding: 8px;
+        text-align: left;
+        font-size: 14px;
+        color: #6B93C0;
+    }
+
+    &__header {
+        .table {
+            &__row {
+                background: #C6D1FF;
+            }
+
+            &__cell {
+                color: #3F337D;
+            }
+        }
+
+    }
+}
+
+@include desktopRespond() {
+    .table {
+        &__row {
+            margin-bottom: 8px;
+            overflow-y: auto;
+        }
+
+        &__cell {
+            font-size: 16px;
+            padding: 14px;
+        }
+    }
+}

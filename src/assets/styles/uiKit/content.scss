@@ -1,0 +1,15 @@
+@import "../mixins.scss";
+
+.content {
+    flex: 1 1 auto;
+    overflow-y: overlay;
+    overflow-x: hidden;
+    padding: 16px;
+    height: 90vh;
+}
+
+@include desktopRespond {
+    .content {
+        padding: 24px;
+    }
+}

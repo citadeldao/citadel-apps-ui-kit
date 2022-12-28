@@ -1,0 +1,12 @@
+.card {
+    background: #F4F6FF;
+    border-radius: 4px;
+    padding: 16px;
+    cursor: pointer;
+    transition: .5s;
+
+    &:hover {
+        background: #FFFFFF;
+        box-shadow: 0 4px 25px rgb(86 57 224 / 30%);
+    }
+}

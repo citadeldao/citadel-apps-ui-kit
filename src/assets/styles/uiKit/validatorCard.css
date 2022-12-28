@@ -1,0 +1,100 @@
+.validator-card-item {
+    background: linear-gradient(90deg, #F1F0FF 0%, #E3F6FF 100%);
+    border-radius: 4px;
+    padding: 13px 20px 14px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: .5s;
+    cursor: default;
+}
+
+.validator-card-item .no-validator-card h2, .validator-card-item .no-validator-card p {
+    margin: 0;
+}
+
+.no-validator-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.validator-card-item .no-validator-card h2 {
+    color: #3A5EE5;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.validator-label {
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 3px;
+    color: #6B93C0;
+}
+
+.no-validator-card-item:hover {
+    background: #FFFFFF;
+    cursor: pointer;
+    box-shadow: 0px 4px 25px rgba(86, 57, 224, 0.3);
+}
+
+.validator-card-item .no-validator-card .selected-bold-label {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.validator-data h4 {
+    margin: 0;
+}
+
+.validator-data {
+    margin-top: 6px;
+}
+
+.validator-data img {
+    width: 24px;
+    height: 24px;
+    margin-right: 6px;
+}
+
+.validator-amount {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #5639E0;
+    margin: 6px 0 0 0;
+}
+
+.validator-amount-block {
+    text-align: right;
+}
+
+.validator-amount span {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #292929;
+}
+
+.validator-data {
+    display: flex;
+    align-items: center;
+}
+
+p.validator-fee-txt {
+    padding-left: 10px;
+    color:  #59779A;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.validator-fee-amount {
+    color: #D900AB;
+    padding-right: 3px;
+    font-weight: 600;
+}
+
+.validator-icon div.coin-icons {
+    padding-right: 10px;
+}

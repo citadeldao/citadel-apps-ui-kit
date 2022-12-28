@@ -1,0 +1,46 @@
+.tab-btn-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.tab-btn {
+    width: 100%;
+    height: 35px;
+    background-color: #0095D6;
+    border: none;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 8px;
+    border-radius: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.tab-btn:hover {
+    background-color: #6B93C0 !important;
+}
+
+.tab1-btn-container, .tab2-btn-container, .tab3-btn-container, .tab4-btn-container {
+    margin-bottom: 20px;
+}
+
+.tab1-btn-container {
+    width: 152px;
+}
+
+.tab2-btn-container {
+    width: 178px;
+}
+
+.tab3-btn-container {
+    width: 237px;
+}
+
+.tab4-btn-container {
+    width: 356px;
+}

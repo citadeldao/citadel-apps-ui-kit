@@ -1,0 +1,57 @@
+.unbonded-liquidity-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(90deg, #F3E7FF 0%, #CDE6FF 100%);
+    border-radius: 8px;
+    padding: 14px;
+    margin: 20px 0;
+}
+
+.unbonded-liquidity-block--text {
+    display: flex;
+    flex-direction: column;
+}
+
+.unbonded-popup {
+    display: flex;
+    align-items: center;
+}
+
+.unbonded-popup--text {
+    color: #173296;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+    text-transform: uppercase;
+    line-height: 30px;
+}
+
+.unbonded-period {
+    color: #59779A;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.unbonded-period span {
+    color: #292929;
+    font-weight: 600;
+}
+
+.unbonded-pools {
+    display: flex;
+    flex-direction: column;
+}
+
+.unbonded-pools p {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 22px;
+}
+
+.unbonded-pools p span {
+    font-weight: 400;
+    color: #292929;
+}
